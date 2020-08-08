@@ -22,4 +22,13 @@ router
     }
   });
 
+router.route('/:id').get(async (req, res) => {
+  const construction = await constructionModel.findById(req.params.id);
+  if (!construction) {
+    res.status(404).json({
+      message: 'No construction found',
+    });
+  } else res.send(construction);
+});
+
 module.exports = router;
