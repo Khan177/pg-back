@@ -21,11 +21,15 @@ const ConstructionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  legalAddress: {
+    type: String,
+    required: true,
+  },
   dateOfCreation: {
     type: Date,
     required: true,
   },
-  comment: {
+  generalComment: {
     type: String,
     required: true,
   },
@@ -49,35 +53,37 @@ const ConstructionSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
-  format: {
-    type: String,
-    required: true,
-  },
-  side: {
-    type: String,
-    required: true,
-  },
-  advertisingSide: {
-    type: String,
-    required: true,
-  },
-  purposeSide: {
-    type: String,
-    required: true,
-  },
-  sizes: {
-    type: Number,
-    required: true,
-  },
-  availabilitySide: {
-    type: String,
-    required: true,
-  },
+  sides: [{
+    format: {
+      type: String,
+      required: true,
+    },
+    side: {
+      type: String,
+      required: true,
+    },
+    advertisingSide: {
+      type: String,
+      required: true,
+    },
+    purposeSide: {
+      type: String,
+      required: true,
+    },
+    sizes: {
+      type: Number,
+      required: true,
+    },
+    availabilitySide: {
+      type: String,
+      required: true,
+    },
+  }],
   crew: {
     type: String,
     required: true,
   },
-  inventoryNumber: {
+  generalInventoryNumber: {
     type: String,
     required: true,
   },
@@ -89,11 +95,19 @@ const ConstructionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  techComment: {
+    type: String,
+    required: true,
+  },
   connectionStatus: {
     type: String,
     required: true,
   },
   markup: {
+    type: String,
+    required: true,
+  },
+  bookkeepInventoryNumber: {
     type: String,
     required: true,
   },
@@ -105,9 +119,9 @@ const ConstructionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  isBurning: {
+  isLightUp: {
     type: Boolean,
-    default: true,
+    required: true,
   },
   code: {
     type: String,
