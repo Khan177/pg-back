@@ -105,6 +105,10 @@ const ConstructionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  isBurning: {
+    type: Boolean,
+    default: true,
+  },
   code: {
     type: String,
     required: true,
