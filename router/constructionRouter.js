@@ -34,17 +34,18 @@ router
   })
   .delete(async (req, res) => {
     try {
-      const direction = await directionModel.findByIdAndDelete(req.params.id);
-      if (!direction) res.status(404).send('No direction found');
-      res.status(200).send({
-        message: 'Успешно удалено!',
-      });
+      const construction = await constructionModel.findByIdAndDelete(req.params.id);
+      if (!construction) res.status(404).send('No construction found');
+      else
+        res.status(200).send({
+          message: 'Успешно удалено!',
+        });
     } catch (err) {
       res.status(500).send(err);
     }
   })
   .put(async (req, res) => {
-    directionModel.findByIdAndUpdate(
+    constructionModel.findByIdAndUpdate(
       req.params.id,
       { $set: req.body },
       { new: true },
