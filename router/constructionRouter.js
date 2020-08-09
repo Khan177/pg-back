@@ -56,4 +56,13 @@ router
     );
   });
 
+router.route('/cities').get(async (req, res) => {
+  const construction = await constructionModel.find({});
+  try {
+    res.send(construction);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
 module.exports = router;
