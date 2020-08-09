@@ -10,6 +10,7 @@ const partnerRouter = require('./router/partnerRouter');
 const cityRouter = require('./router/cityRouter');
 const districtRouter = require('./router/districtRouter');
 const postalCodeRouter = require('./router/postalCodeRouter');
+const contragentRouter = require('./router/contragentRouter');
 
 mongoose.connect(DB_KEY, {
   useUnifiedTopology: true,
@@ -24,4 +25,5 @@ app.use('/partners', partnerRouter);
 app.use('/cities', cityRouter);
 app.use('/districts', districtRouter);
 app.use('/postcodes', postalCodeRouter);
+app.use('/contragents', contragentRouter);
 app.listen(PORT);
