@@ -57,7 +57,7 @@ const PartnerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  phoneContact: {
+  phoneContact: [{
     fullname: {
       type: String,
       required: true,
@@ -70,7 +70,7 @@ const PartnerSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-  },
+  }],
   agencyComissionType: {
     type: String,
     required: true,
