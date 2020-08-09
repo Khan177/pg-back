@@ -11,7 +11,6 @@ const cityRouter = require('./router/cityRouter');
 const districtRouter = require('./router/districtRouter');
 const postalCodeRouter = require('./router/postalCodeRouter');
 
-
 mongoose.connect(DB_KEY, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
