@@ -5,6 +5,10 @@ const PartnerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  advertiser: {
+    type: String,
+    required: true,
+  },
   sector: {
     type: String,
     required: true,
