@@ -5,7 +5,7 @@ const PartnerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  production: {
+  sector: {
     type: String,
     required: true,
   },
@@ -13,7 +13,7 @@ const PartnerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  sector: {
+  partnerType: {
     type: String,
     required: true,
   },
@@ -29,7 +29,7 @@ const PartnerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  postcode: {
+  postalCode: {
     type: String,
     required: true,
   },
@@ -57,17 +57,19 @@ const PartnerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  fullname: {
-    type: String,
-    required: true,
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
+  phoneContact: {
+    fullname: {
+      type: String,
+      required: true,
+    },
+    phone: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
   },
   agencyComissionType: {
     type: String,
