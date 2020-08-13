@@ -25,6 +25,10 @@ const LocationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  specialPurpose: {
+    type: String,
+    required: true,
+  },
   area: {
     type: String,
     required: true,
