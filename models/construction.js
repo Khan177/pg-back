@@ -23,7 +23,6 @@ const ConstructionSchema = new mongoose.Schema({
   },
   legalAddress: {
     type: String,
-    required: true,
   },
   dateOfCreation: {
     type: Date,
@@ -121,27 +120,21 @@ const ConstructionSchema = new mongoose.Schema({
   },
   isLightUp: {
     type: Boolean,
-    required: true,
   },
   code: {
     type: String,
-    required: true,
   },
   responsible: {
     type: String,
-    required: true,
   },
   manipulationType: {
     type: String,
-    required: true,
   },
   informationBefore: {
     type: String,
-    required: true,
   },
   informationAfter: {
     type: String,
-    required: true,
   },
 });
 
