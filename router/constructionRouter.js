@@ -9,7 +9,9 @@ router
     try {
       res.send(construction);
     } catch (err) {
-      res.status(500).send(err);
+      res.status(500).json({
+        message: err.message,
+      });
     }
   })
   .post(async (req, res) => {
@@ -18,7 +20,9 @@ router
       await construction.save();
       res.send(construction);
     } catch (err) {
-      res.status(500).send(err);
+      res.status(500).json({
+        message: err.message,
+      });
     }
   });
 
@@ -51,7 +55,12 @@ router
       { new: true },
       (err, docs) => {
         if (!err) res.send(docs);
-        else console.log('Error while updating a record : ' + JSON.stringify(err, undefined, 2));
+        else
+          res
+            .status(500)
+            .json({
+              message: 'Error while updating a record : ' + JSON.stringify(err, undefined, 2),
+            });
       }
     );
   });
