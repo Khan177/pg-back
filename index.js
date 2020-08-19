@@ -12,7 +12,7 @@ const contragentRouter = require('./router/contragentRouter');
 const cityRouter = require('./router/cityRouter');
 const districtRouter = require('./router/districtRouter');
 const postalCodeRouter = require('./router/postalCodeRouter');
-const installationRouter = require('./router/installationsRouter');
+const installationRouter = require('./router/installationRouter');
 
 mongoose.connect(DB_KEY, {
   useUnifiedTopology: true,
